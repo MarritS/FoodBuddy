@@ -6,27 +6,27 @@ public class FoodItem {
 
 
     private String name;
-    private Date expirationDate;
+    private int Id;
 
-    public FoodItem(String name, Date expirationDate) {
+    FoodItem(String name, int id) {
         this.name = name;
-        this.expirationDate = expirationDate;
+        this.Id = id;
     }
 
-    public String getName() {
+    String getName() {
         return name;
     }
 
-    public Date getExpirationDate() {
-        return expirationDate;
+    int getId() {
+        return Id;
     }
 
     public void setName(String name) {
         this.name = name;
     }
 
-    public void setExpirationDate(Date expirationDate) {
-        this.expirationDate = expirationDate;
+    public void Id(int id) {
+        this.Id = id;
     }
 
 }
