@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -26,6 +27,15 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        FoodItem item = new FoodItem("Eggs", 3);
+        DatabaseHandler handler = new DatabaseHandler(getApplicationContext());
+        handler.addHandler(item);
+
+        { //Debug function
+           FoodItem itemTest = handler.loadHandler();
+            handler.addHandler(item);
+        }
     }
 
     @Override
